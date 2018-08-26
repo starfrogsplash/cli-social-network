@@ -39,6 +39,12 @@ class User {
         return readMessages.join(`\n`)
     }
 
+    follows(followedName) {
+        this.following.push(followedName)
+        console.log(`${this.name} follows ${followedName}`)
+        return `${this.name} follows ${followedName}`
+    }
+
 
 
 
