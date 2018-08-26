@@ -38,6 +38,6 @@ e.g.  Jake `follows` Alice
 
 Wall: username `wall` (will show user's wall)
 
-e.g.  Jake `wall
+e.g.  Jake `wall`
 
 
