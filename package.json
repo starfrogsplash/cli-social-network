@@ -1,8 +1,10 @@
 {
-  "name": "ali-codurance",
+  "name": "codurance",
   "version": "1.0.0",
   "description": "CLI Twitter clone",
   "main": "codurance.js",
+  "preferGlobal": true,
+  "bin": "./prompter.js",
   "directories": {
     "test": "test"
   },
