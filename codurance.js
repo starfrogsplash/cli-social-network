@@ -6,10 +6,15 @@ class User {
         this.messages = [];
         this.following = []
     }
+
+    post (message)  {
+        let timestamp = Date.now()
+        this.messages.unshift({[timestamp]: message})
+    }
 }
 
-Users['Alice'] = new User('Alice')
+// Users['Alice'] = new User('Alice')
 
-console.log(Users.Alice)
+// console.log(Users.Alice)
 
 module.exports = {Users, User}
