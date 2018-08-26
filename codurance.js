@@ -45,14 +45,21 @@ class User {
         return `${this.name} follows ${followedName}`
     }
 
-
-
-
-
+    wall(){
+        let wallfeed = this.messages.map(message => {
+            return { [Object.keys(message)] : `${this.name} - ${Object.values(message)}`}
+        })
+        if (this.following.length === 0) {
+            console.log('Not following anyone')
+        } else {
+            this.following.forEach(user => wallfeed.push(...Users[user].messages.map(message => {
+                return { [Object.keys(message)] : `${user} - ${Object.values(message)}`}
+            })))
+        }
+        wallfeed.sort((a, b) => Object.keys(b) - Object.keys(a))
+        return this.read(wallfeed)
+    }
 }
 
-// Users['Alice'] = new User('Alice')
-
-// console.log(Users.Alice)
 
 module.exports = {Users, User}
